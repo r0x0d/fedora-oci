@@ -3,8 +3,8 @@
 
 type: default-flatpaks
 configurations:
-  - notify: false
-    scope: user
+  - notify: true
+    scope: system
     install:
         - org.mozilla.firefox
         - org.gnome.Loupe
