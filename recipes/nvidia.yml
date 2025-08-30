@@ -31,4 +31,10 @@ modules:
   - from-file: common/flatpaks.yml
   - from-file: common/rpm-ostree.yml
 
+  - type: kargs
+    arch: x86_64, aarch64
+    kargs:
+      - rd.driver.blacklist=nouveau,nova_core
+      - modprobe.blacklist=nouveau,nova_core
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
