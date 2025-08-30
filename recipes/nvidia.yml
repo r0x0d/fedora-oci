@@ -30,6 +30,7 @@ modules:
   # shared modules
   - from-file: common/flatpaks.yml
   - from-file: common/rpm-ostree.yml
+  - from-file: common/gnome-extensions.yml
 
   - type: kargs
     arch: x86_64, aarch64

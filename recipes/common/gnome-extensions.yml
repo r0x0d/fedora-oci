@@ -1,0 +1,8 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+
+type: gnome-extensions
+install:
+  - 307 # dash-to-dock
+  - 517 # caffeine
+  - 615 # AppIndicator and KStatusNotifierItem Support
