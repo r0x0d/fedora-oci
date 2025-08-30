@@ -1,0 +1,3 @@
+docker:
+  quay.io/fedora-oci:
+    use-sigstore-attachments: true

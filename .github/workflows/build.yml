@@ -26,8 +26,9 @@ jobs:
       fail-fast: false # stop GH from cancelling all matrix builds if one fails
       matrix:
         recipe:
-          # !! Add your recipes here
-          - recipe.yml
+          - nvidia.yml
+          - amd.yml
+          - intel.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
@@ -35,8 +36,13 @@ jobs:
         with:
           recipe: ${{ matrix.recipe }}
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
-          registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
+          registry_token: ${{ secrets.BOT_SECRET }}
+          registry_username: ${{ secrets.BOT_USERNAME }}
+          registry: quay.io
+          registry_namespace: fedora-oci
+          rechunk: true
+          use_cache: true
 
           # enabled by default, disable if your image is small and you want faster builds
           maximize_build_space: true

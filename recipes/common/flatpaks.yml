@@ -1,0 +1,13 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+
+type: default-flatpaks
+configurations:
+  - notify: false
+    scope: system
+    install:
+        - org.mozilla.firefox
+        - org.gnome.Loupe
+        - com.usebottles.bottles
+        - net.lutris.Lutris
+        - com.github.tchx84.Flatseal
