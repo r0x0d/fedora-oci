@@ -11,3 +11,8 @@ configurations:
         - com.usebottles.bottles
         - net.lutris.Lutris
         - com.github.tchx84.Flatseal
+        - com.discordapp.Discord
+        - com.google.Chrome
+        - com.spotify.Client
+        - com.valvesoftware.Steam
+        - io.podman_desktop.PodmanDesktop
