@@ -7,7 +7,7 @@ description: Custom fedora atomic images
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: quay.io/fedora/fedora-silverblue
-image-version: 42 # latest is also supported if you want new updates ASAP
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -16,19 +16,20 @@ modules:
 
   - from-file: common/dnf.yml
 
-  - type: rpm-ostree
+  - type: dnf
     install:
-      - akmod-nvidia
-      - xorg-x11-drv-nvidia
-      - xorg-x11-drv-nvidia-cuda
-      - xorg-x11-drv-nvidia-cuda-libs
-      - xorg-x11-drv-nvidia-libs
-      - nvidia-settings
-      - nvidia-modprobe
-      - akmods
-      - nvidia-vaapi-driver
-      - libva-utils
-      - vdpauinfo
+      packages:
+        - akmod-nvidia
+        - xorg-x11-drv-nvidia
+        - xorg-x11-drv-nvidia-cuda
+        - xorg-x11-drv-nvidia-cuda-libs
+        - xorg-x11-drv-nvidia-libs
+        - nvidia-settings
+        - nvidia-modprobe
+        - akmods
+        - nvidia-vaapi-driver
+        - libva-utils
+        - vdpauinfo
 
   # shared modules
   - from-file: common/flatpaks.yml
