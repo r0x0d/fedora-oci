@@ -12,41 +12,24 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  # This is needed by the nvidia/setup.sh script.
+  # ublu-os akmods image made the switch to negativo17 repos instead of
+  # rpmfusion.
+  - type: dnf
+    repos:
+      nonfree: negativo17
+
   - from-file: common/files.yml
 
-  - from-file: common/dnf.yml
-
-  - type: dnf
-    install:
-      packages:
-        - akmod-nvidia
-        - xorg-x11-drv-nvidia
-        - xorg-x11-drv-nvidia-cuda
-        - xorg-x11-drv-nvidia-cuda-libs
-        - xorg-x11-drv-nvidia-libs
-        - nvidia-settings
-        - nvidia-modprobe
-        - akmods
-        - nvidia-vaapi-driver
-        - libva-utils
-        - vdpauinfo
+  - from-file: common/systemd.yml
 
   # shared modules
   - from-file: common/flatpaks.yml
   - from-file: common/rpm-ostree.yml
   - from-file: common/gnome-extensions.yml
 
-  - type: kargs
-    arch: x86_64, aarch64
-    kargs:
-      - rd.driver.blacklist=nouveau,nova_core
-      - modprobe.blacklist=nouveau,nova_core
-      - nvidia-drm.modeset=1
-      - initcall_blacklist=simpledrm_platform_driver_init
-
-  - type: systemd
-    system:
-      enabled:
-        - akmods.service
+  - type: script
+    scripts:
+      - nvidia/setup.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

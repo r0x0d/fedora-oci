@@ -3,6 +3,6 @@
 
 type: gnome-extensions
 install:
-  - 307 # dash-to-dock
-  - 517 # caffeine
-  - 615 # AppIndicator and KStatusNotifierItem Support
+  - Dash to Dock
+  - Caffeine
+  - AppIndicator and KStatusNotifierItem Support
