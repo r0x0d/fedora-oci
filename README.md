@@ -1,19 +1,16 @@
-# fedora-oci Image Repo
+# Fedora OCI
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
-
-After setup, it is recommended you update this README to describe your custom image.
+Repository with custom fedora oci images built using [BlueBuild](https://blue-build.org).
 
 ## Installation
 
-> **Warning**
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
-
-To rebase an existing atomic Fedora installation to the latest build:
+To rebase to the latest image, use the following:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:quay.io/fedora-oci/nvidia:latest
+  # Will setup the system and most importantly, will place the pub files inside
+  # /etc/pki/containers
+  rpm-ostree rebase ostree-unverified-registry:quay.io/fedora-oci/<target>:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -21,25 +18,25 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://quay.io/fedora-oci/nvidia:latest
+  rpm-ostree rebase ostree-image-signed:docker://quay.io/fedora-oci/<target>:latest
   ```
 - Reboot again to complete the installation
   ```
   systemctl reboot
   ```
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+The images built in this repository are:
 
-## ISO
-
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+* quay.io/fedora-oci/nvidia:latest
+* quay.io/fedora-oci/amd:latest
+* quay.io/fedora-oci/intel:latest
 
 ## Verification
 
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
-cosign verify --key cosign.pub quay.io/fedora-oci/nvidia
+cosign verify --key cosign.pub quay.io/fedora-oci/<target>
 ```
 
 Cloned from https://github.com/blue-build/template
