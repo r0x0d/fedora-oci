@@ -8,7 +8,8 @@ set -eoux pipefail
 # done
 
 AKMODS_FLAVOR="main"
-BASE_IMAGE_NAME="silverblue"
+BASE_IMAGE_NAME=${BASE_IMAGE##*/}
+BASE_IMAGE_NAME=${BASE_IMAGE_NAME%-*}
 
 # Fetch Common AKMODS & Kernel RPMS
 skopeo copy --retry-times 3 docker://ghcr.io/ublue-os/akmods:"${AKMODS_FLAVOR}"-"$(rpm -E %fedora)" dir:/tmp/akmods
