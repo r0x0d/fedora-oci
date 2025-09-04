@@ -16,3 +16,4 @@ configurations:
         - com.spotify.Client
         - com.valvesoftware.Steam
         - io.podman_desktop.PodmanDesktop
+        - com.visualstudio.code
