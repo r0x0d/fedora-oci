@@ -14,23 +14,19 @@ image-version: 42 # latest is also supported if you want new updates ASAP
 modules:
   - from-file: common/files.yml
 
+  - type: akmods
+    install: []
+    nvidia-driver: nvidia
+
   # shared modules
   - from-file: common/flatpaks.yml
   - from-file: common/rpm-ostree.yml
 
-  # This is needed by the nvidia/setup.sh script.
-  # ublu-os akmods image made the switch to negativo17 repos instead of
-  # rpmfusion.
-  - type: dnf
-    repos:
-      nonfree: negativo17
-
-  - type: script
-    scripts:
-      - nvidia/setup.sh
-
   - from-file: common/systemd.yml
 
   - from-file: common/gnome-extensions.yml
+
+  - type: chezmoi
+    repository: "https://github.com/r0x0d/dotfiles"
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
