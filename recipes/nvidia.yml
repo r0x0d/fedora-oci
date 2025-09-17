@@ -14,10 +14,6 @@ image-version: 42 # latest is also supported if you want new updates ASAP
 modules:
   - from-file: common/files.yml
 
-  - type: akmods
-    install: []
-    nvidia-driver: nvidia-open
-
   # shared modules
   - from-file: common/flatpaks.yml
   - from-file: common/rpm-ostree.yml
@@ -25,6 +21,15 @@ modules:
   - from-file: common/systemd.yml
 
   - from-file: common/gnome-extensions.yml
+
+  - from-file: common/dnf.yml
+
+  - type: rpm-ostree
+    install:
+      - akmod-nvidia
+      - xorg-x11-drv-nvidia-cuda
+      - akmod-nvidia
+      - xorg-x11-drv-nvidia-cuda
 
   - type: chezmoi
     repository: "https://github.com/r0x0d/dotfiles"
