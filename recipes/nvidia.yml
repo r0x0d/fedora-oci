@@ -24,12 +24,9 @@ modules:
 
   - from-file: common/dnf.yml
 
-  - type: rpm-ostree
-    install:
-      - akmod-nvidia
-      - xorg-x11-drv-nvidia-cuda
-      - akmod-nvidia
-      - xorg-x11-drv-nvidia-cuda
+  - type: akmods
+    install: []
+    nvidia-driver: nvidia-open
 
   - type: chezmoi
     repository: "https://github.com/r0x0d/dotfiles"
