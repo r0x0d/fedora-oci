@@ -27,17 +27,6 @@ modules:
       - akmod-nvidia
       - xorg-x11-drv-nvidia
       - xorg-x11-drv-nvidia-cuda
-      - xorg-x11-drv-nvidia-libs
-      - xorg-x11-drv-nvidia-cuda-libs
-      - nvidia-settings
-      - nvidia-modprobe
-      - nvidia-driver-cuda
-
-  - type: kargs
-    arch: x86_64
-    kargs:
-      - rd.driver.blacklist=nouveau,nova_core
-      - modprobe.blacklist=nouveau,nova_core
 
   - type: systemd
     system:
