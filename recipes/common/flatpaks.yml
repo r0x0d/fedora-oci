@@ -6,10 +6,9 @@ configurations:
   - notify: true
     scope: user
     install:
-        - org.mozilla.firefox
         - org.gnome.Loupe
         - com.usebottles.bottles
-        - net.lutris.Lutris
+        - com.heroicgameslauncher.hgl
         - com.github.tchx84.Flatseal
         - com.discordapp.Discord
         - com.google.Chrome

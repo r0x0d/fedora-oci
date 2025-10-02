@@ -9,6 +9,21 @@ install:
   - qemu-kvm
   - virt-manager
   - waypipe
+  - wl-clipboard
+  - gstreamer1-plugin-libav
+  - gstreamer1-plugins-bad-free-extras
+  - gstreamer1-plugins-bad-freeworld
+  - gstreamer1-plugins-ugly
+  - gstreamer1-vaapi
+  - ffmpeg
 remove:
-  - firefox
-  - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+  - fdk-aac-free
+  - libavcodec-free
+  - libavdevice-free
+  - libavfilter-free
+  - libavformat-free
+  - libavutil-free
+  - libpostproc-free
+  - libswresample-free
+  - libswscale-free
+  - ffmpeg-free
