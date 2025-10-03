@@ -16,6 +16,7 @@ install:
   - gstreamer1-plugins-ugly
   - gstreamer1-vaapi
   - ffmpeg
+  - gh
 remove:
   - fdk-aac-free
   - libavcodec-free
