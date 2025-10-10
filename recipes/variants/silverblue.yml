@@ -1,0 +1,19 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+
+modules:
+  - type: gnome-extensions
+    install:
+      - Dash to Dock
+      - Caffeine
+      - AppIndicator and KStatusNotifierItem Support
+
+  - type: default-flatpaks
+    configurations:
+    - notify: true
+      scope: user
+      install:
+        - org.gnome.Loupe
+        - com.mattjakeman.ExtensionManager
+
+  - from-file: variants/default.yml

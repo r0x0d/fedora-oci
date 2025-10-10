@@ -1,0 +1,17 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+
+modules:
+  - from-file: shared/files.yml
+
+  - from-file: shared/dnf.yml
+
+  # shared modules
+  - from-file: shared/flatpaks.yml
+  - from-file: shared/rpm-ostree.yml
+  - from-file: shared/systemd.yml
+
+  - type: chezmoi
+    repository: "https://github.com/r0x0d/dotfiles"
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
