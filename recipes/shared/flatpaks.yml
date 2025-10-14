@@ -16,4 +16,3 @@ configurations:
         - io.podman_desktop.PodmanDesktop
         - com.visualstudio.code
         - org.libreoffice.LibreOffice
-        - com.visualstudio.code.tool.podman/x86_64/stable
