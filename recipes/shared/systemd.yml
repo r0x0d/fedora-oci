@@ -3,6 +3,7 @@
 
 type: systemd
 system:
-  disabled:
+  enabled:
     - rpm-ostreed-automatic.timer
+  disabled:
     - bootc-fetch-apply-updates.timer
