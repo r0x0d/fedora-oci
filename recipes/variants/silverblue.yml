@@ -16,5 +16,6 @@ modules:
         - org.gnome.Loupe
         - com.mattjakeman.ExtensionManager
         - org.gnome.Connections
+        - page.tesk.Refine
 
   - from-file: variants/default.yml
