@@ -16,3 +16,7 @@ configurations:
         - io.podman_desktop.PodmanDesktop
         - com.visualstudio.code
         - org.libreoffice.LibreOffice
+        - de.swsnr.turnon
+        - org.nickvision.tubeconverter
+        - io.gitlab.news_flash.NewsFlash
+        - io.github.alainm23.planify
