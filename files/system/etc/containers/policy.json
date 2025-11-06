@@ -57,6 +57,13 @@
                     "type": "insecureAcceptAnything"
                 }
             ]
+        },
+        "docker-archive": {
+            "": [
+                {
+                    "type": "insecureAcceptAnything"
+                }
+            ]
         }
     }
 }
