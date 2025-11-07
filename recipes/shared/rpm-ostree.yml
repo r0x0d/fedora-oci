@@ -17,6 +17,7 @@ install:
   - gstreamer1-vaapi
   - ffmpeg
   - gh
+  - fish
 remove:
   - fdk-aac-free
   - libavcodec-free
