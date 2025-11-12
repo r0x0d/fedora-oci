@@ -4,3 +4,32 @@
 type: dnf
 repos:
   nonfree: rpmfusion
+install:
+  packages:
+    - libvirt
+    - make
+    - qemu
+    - qemu-kvm
+    - virt-manager
+    - waypipe
+    - wl-clipboard
+    - gstreamer1-plugin-libav
+    - gstreamer1-plugins-bad-free-extras
+    - gstreamer1-plugins-bad-freeworld
+    - gstreamer1-plugins-ugly
+    - gstreamer1-vaapi
+    - ffmpeg
+    - gh
+    - fish
+remove:
+  packages:
+    - fdk-aac-free
+    - libavcodec-free
+    - libavdevice-free
+    - libavfilter-free
+    - libavformat-free
+    - libavutil-free
+    - libpostproc-free
+    - libswresample-free
+    - libswscale-free
+    - ffmpeg-free

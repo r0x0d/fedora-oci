@@ -6,7 +6,7 @@ name: nvidia
 description: Custom fedora atomic images
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: quay.io/fedora/fedora-silverblue
+base-image: quay.io/fedora-ostree-desktops/kinoite
 image-version: 43 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -23,4 +23,4 @@ modules:
         - nvidia-resume.service
         - nvidia-hibernate.service
 
-  - from-file: variants/silverblue.yml
+  - from-file: variants/kinoite.yml
