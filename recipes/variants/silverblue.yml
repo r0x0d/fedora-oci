@@ -19,4 +19,11 @@ modules:
         - org.gnome.Connections
         - page.tesk.Refine
 
+  - type: systemd
+    user:
+      enabled:
+        - xdg-desktop-portal-gtk.service
+      disabled:
+        - xdg-desktop-portal.service
+
   - from-file: variants/default.yml

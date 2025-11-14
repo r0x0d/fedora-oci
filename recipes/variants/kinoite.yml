@@ -2,4 +2,11 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 
 modules:
+  - type: systemd
+    user:
+      enabled:
+        - xdg-desktop-portal.service
+      disabled:
+        - xdg-desktop-portal-gtk.service
+
   - from-file: variants/default.yml
