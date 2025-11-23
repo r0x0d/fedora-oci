@@ -6,6 +6,7 @@ modules:
   - from-file: shared/dnf.yml
   - from-file: shared/flatpaks.yml
   - from-file: shared/systemd.yml
+  - from-file: shared/rpm-ostree.yml
 
   - type: chezmoi
     repository: "https://github.com/r0x0d/dotfiles"

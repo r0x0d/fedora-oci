@@ -23,4 +23,8 @@ modules:
         - nvidia-resume.service
         - nvidia-hibernate.service
 
+  - type: rpm-ostree
+    install:
+      - libva-nvidia-driver
+
   - from-file: variants/silverblue.yml
