@@ -1,6 +1,9 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 
+# This module is mainly used for https://rpmfusion.org/Howto/OSTree, since
+# doing the same with dnf5 breaks everything.
+
 type: rpm-ostree
 install:
   - gstreamer1-plugin-libav
