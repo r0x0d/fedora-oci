@@ -20,3 +20,4 @@ configurations:
         - org.nickvision.tubeconverter
         - io.gitlab.news_flash.NewsFlash
         - io.github.alainm23.planify
+        - im.riot.Riot
