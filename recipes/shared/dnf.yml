@@ -15,3 +15,4 @@ install:
     - wl-clipboard
     - gh
     - fish
+    - fuse-sshfs

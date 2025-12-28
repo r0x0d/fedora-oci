@@ -9,4 +9,9 @@ modules:
       disabled:
         - xdg-desktop-portal-gtk.service
 
+  - type: dnf
+    install:
+      packages:
+        - alacritty
+
   - from-file: variants/default.yml

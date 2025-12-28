@@ -26,9 +26,4 @@ modules:
       disabled:
         - xdg-desktop-portal.service
 
-  - type: dnf
-    install:
-      packages:
-        - fuse-sshfs
-
   - from-file: variants/default.yml
