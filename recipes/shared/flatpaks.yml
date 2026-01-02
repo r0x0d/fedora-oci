@@ -6,7 +6,6 @@ configurations:
   - notify: true
     scope: user
     install:
-        - com.usebottles.bottles
         - com.heroicgameslauncher.hgl
         - com.github.tchx84.Flatseal
         - com.discordapp.Discord
