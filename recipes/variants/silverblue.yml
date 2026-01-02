@@ -7,7 +7,6 @@ modules:
       - Dash to Dock
       - Caffeine
       - AppIndicator and KStatusNotifierItem Support
-      - Vitals
 
   - type: default-flatpaks
     configurations:
