@@ -29,6 +29,11 @@ jobs:
           - nvidia.yml
           - amd.yml
     steps:
+      - uses: actions/checkout@v6.0.1
+      - run: |
+          curl -o files/system/etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/refs/heads/master/alternates/fakenews-gambling-porn-social/hosts
+          ls files/system/etc
+
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
         uses: blue-build/github-action@v1.9
