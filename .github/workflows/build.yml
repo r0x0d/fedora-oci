@@ -40,11 +40,9 @@ jobs:
           registry_username: ${{ secrets.BOT_USERNAME }}
           registry: quay.io
           registry_namespace: fedora-oci
-          # We need to use rechunk for now since it fails with our nvidia builds.
-          # TODO(r0x0d): Once
-          # https://github.com/r0x0d/fedora-oci/actions/runs/20686359256/job/59387543537#step:2:1337
-          # is fixed, switch to build_chunked_oci
-          rechunk: true
+          build_chunked_oci: true
+          rechunk_clear_plan: true
           use_cache: true
+          verify_install: true
           # enabled by default, disable if your image is small and you want faster builds
           maximize_build_space: true
