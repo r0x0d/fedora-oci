@@ -16,3 +16,4 @@ install:
     - gh
     - fish
     - fuse-sshfs
+    - firefox
