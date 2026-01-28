@@ -18,7 +18,7 @@ modules:
 
   - type: systemd
     system:
-      enabled:
+      disabled:
         - nvidia-suspend.service
         - nvidia-resume.service
         - nvidia-hibernate.service
