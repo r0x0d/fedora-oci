@@ -9,10 +9,9 @@ configurations:
         - com.heroicgameslauncher.hgl
         - com.github.tchx84.Flatseal
         - com.discordapp.Discord
-        - com.google.Chrome
+        - org.chromium.Chromium
         - com.spotify.Client
         - com.valvesoftware.Steam
         - io.podman_desktop.PodmanDesktop
-        - com.visualstudio.code
         - org.libreoffice.LibreOffice
         - im.riot.Riot

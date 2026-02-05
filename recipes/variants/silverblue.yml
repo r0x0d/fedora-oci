@@ -17,6 +17,7 @@ modules:
         - com.mattjakeman.ExtensionManager
         - org.gnome.Connections
         - page.tesk.Refine
+        - org.gnome.TextEditor
 
   - type: systemd
     user:
