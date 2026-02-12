@@ -13,7 +13,3 @@ image-version: 43 # latest is also supported if you want new updates ASAP
 # you can include multiple instances of the same module
 modules:
   - from-file: variants/silverblue.yml
-
-  - type: rpm-ostree
-    install:
-      - mesa-vdpau-drivers-freeworld
