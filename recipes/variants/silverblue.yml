@@ -10,14 +10,17 @@ modules:
 
   - type: default-flatpaks
     configurations:
-    - notify: true
+    - notify: false
       scope: user
       install:
-        - org.gnome.Loupe
         - com.mattjakeman.ExtensionManager
-        - org.gnome.Connections
         - page.tesk.Refine
-        - org.gnome.TextEditor
+
+  - type: dnf
+    install:
+      - loupe
+      - gnome-connections
+      - gnome-text-editor
 
   - type: systemd
     user:
