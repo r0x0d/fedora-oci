@@ -28,3 +28,5 @@ modules:
       - libva-nvidia-driver
 
   - from-file: variants/silverblue.yml
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
