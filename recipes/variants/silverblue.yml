@@ -17,9 +17,10 @@ modules:
 
   - type: dnf
     install:
-      - loupe
-      - gnome-connections
-      - gnome-text-editor
+      packages:
+        - loupe
+        - gnome-connections
+        - gnome-text-editor
 
   - type: systemd
     user:
