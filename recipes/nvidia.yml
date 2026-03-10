@@ -14,7 +14,7 @@ image-version: 43 # latest is also supported if you want new updates ASAP
 modules:
   - type: akmods
     install: []
-    nvidia-driver: nvidia-open
+    nvidia-driver: nvidia
 
   - type: systemd
     system:
