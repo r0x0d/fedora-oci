@@ -9,4 +9,9 @@ modules:
       disabled:
         - xdg-desktop-portal-gtk.service
 
+  - type: dnf
+    install:
+      packages:
+        - kate
+
   - from-file: variants/default.yml
