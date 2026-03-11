@@ -4,7 +4,8 @@
 type: systemd
 system:
   enabled:
-    - bootc-fetch-apply-updates.timer
+    - bootc-fetch-updates.timer
     - systemd-timedated.service
   disabled:
     - rpm-ostreed-automatic.timer
+    - bootc-fetch-apply-updates.timer
