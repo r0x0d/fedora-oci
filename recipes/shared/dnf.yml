@@ -18,3 +18,4 @@ install:
     - fuse-sshfs
     - firefox
     - clamav
+    - sensors
