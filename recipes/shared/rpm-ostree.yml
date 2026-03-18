@@ -10,7 +10,6 @@ install:
   - gstreamer1-plugins-bad-free-extras
   - gstreamer1-plugins-bad-freeworld
   - gstreamer1-plugins-ugly
-  - gstreamer1-vaapi
   - ffmpeg
 remove:
   - fdk-aac-free
@@ -19,7 +18,6 @@ remove:
   - libavfilter-free
   - libavformat-free
   - libavutil-free
-  - libpostproc-free
   - libswresample-free
   - libswscale-free
   - ffmpeg-free
