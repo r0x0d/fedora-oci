@@ -14,7 +14,7 @@ image-version: 44 # latest is also supported if you want new updates ASAP
 modules:
   - type: akmods
     install: []
-    nvidia-driver: nvidia-free
+    nvidia-driver: nvidia-open
 
   - type: systemd
     system:
