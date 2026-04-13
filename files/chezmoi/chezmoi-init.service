@@ -1,0 +1,10 @@
+[Unit]
+Description=Initialize Chezmoi dotfiles
+ConditionPathExists=!%h/.local/share/chezmoi/.git/
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/chezmoi init --apply https://github.com/r0x0d/dotfiles
+
+[Install]
+WantedBy=default.target

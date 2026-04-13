@@ -1,8 +1,0 @@
----
-# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
-
-type: systemd
-system:
-  enabled:
-    - systemd-timedated.service
-    - systemd-timesyncd

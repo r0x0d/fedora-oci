@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+INSTALL_LIST="/usr/share/fedora-oci/flatpaks/user/install"
+REPO_NAME="flathub"
+REPO_URL="https://dl.flathub.org/repo/flathub.flatpakrepo"
+
+# Add Flathub if not present
+flatpak remote-add --if-not-exists --user "$REPO_NAME" "$REPO_URL"
+
+# Remove fedora/fedora-testing user remotes if they exist
+for remote in fedora fedora-testing; do
+    if flatpak --user remotes | grep -q "^${remote}"; then
+        flatpak remote-delete --user "$remote" --force || true
+    fi
+done
+
+# Install flatpaks from list
+if [[ -f "$INSTALL_LIST" ]]; then
+    while IFS= read -r app; do
+        [[ -z "$app" || "$app" =~ ^# ]] && continue
+        if ! flatpak list --user --app --columns=application | grep -q "^${app}$"; then
+            echo "Installing $app"
+            flatpak install --user --noninteractive "$REPO_NAME" "$app" || true
+        fi
+    done < "$INSTALL_LIST"
+fi

@@ -1,0 +1,6 @@
+[Unit]
+Description=Update Chezmoi dotfiles
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/chezmoi update --no-tty --keep-going

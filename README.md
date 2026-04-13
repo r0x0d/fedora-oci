@@ -1,6 +1,6 @@
 # Fedora OCI
 
-Repository with custom fedora oci images built using [BlueBuild](https://blue-build.org).
+Custom Fedora Kinoite OCI images built with Containerfiles and GitHub Actions.
 
 ## Installation
 
@@ -8,8 +8,6 @@ To rebase to the latest image, use the following:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  # Will setup the system and most importantly, will place the pub files inside
-  # /etc/pki/containers
   rpm-ostree rebase ostree-unverified-registry:quay.io/fedora-oci/<target>:latest
   ```
 - Reboot to complete the rebase:
@@ -29,7 +27,6 @@ The images built in this repository are:
 
 * quay.io/fedora-oci/nvidia:latest
 * quay.io/fedora-oci/amd:latest
-* quay.io/fedora-oci/intel:latest
 
 ## Verification
 
@@ -38,5 +35,3 @@ These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](ht
 ```bash
 cosign verify --key cosign.pub quay.io/fedora-oci/<target>
 ```
-
-Cloned from https://github.com/blue-build/template
