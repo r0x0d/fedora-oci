@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=quay.io/fedora-ostree-desktops/silverblue
+ARG BASE_IMAGE=quay.io/fedora-ostree-desktops/kinoite
 ARG BASE_VERSION=44
 
 FROM ${BASE_IMAGE}:${BASE_VERSION}
