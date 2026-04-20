@@ -18,7 +18,7 @@ RUN /tmp/scripts/install-nvidia.sh "${VARIANT}"
 COPY files/system/ /
 
 # DNF packages
-RUN /tmp/scripts/install-packages.sh
+RUN /tmp/scripts/setup-dnf.sh
 
 # Flatpak first-boot configuration
 COPY files/flatpak/user-flatpak-setup /usr/bin/user-flatpak-setup
@@ -39,9 +39,8 @@ COPY files/chezmoi/chezmoi-update.timer /usr/lib/systemd/user/chezmoi-update.tim
 RUN /tmp/scripts/install-chezmoi.sh
 
 # Final cleanup
-RUN rm -rf /tmp/scripts && \
-    dnf5 clean all && \
-    rpm-ostree cleanup -m
+RUN /tmp/scripts/cleanup-dnf.sh && \
+    rm -rf /tmp/scripts
 
 # Validate bootc image compatibility
 RUN bootc container lint

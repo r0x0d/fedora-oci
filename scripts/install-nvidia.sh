@@ -23,7 +23,6 @@ dnf5 -y --setopt=tsflags=noscripts install \
     xorg-x11-drv-nvidia \
     libva-nvidia-driver
 akmods --force --kernels "${KERNEL_VERSION}"
-dnf5 clean all
 
 # Blacklist nouveau and enable nvidia-drm.modeset on boot
 mkdir -p /usr/lib/bootc/kargs.d
