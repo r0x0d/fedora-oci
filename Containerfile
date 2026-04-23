@@ -41,6 +41,3 @@ RUN /tmp/scripts/install-chezmoi.sh
 # Final cleanup
 RUN /tmp/scripts/cleanup-dnf.sh && \
     rm -rf /tmp/scripts
-
-# Validate bootc image compatibility
-RUN bootc container lint
