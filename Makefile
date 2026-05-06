@@ -1,6 +1,6 @@
 REGISTRY ?= quay.io
 NAMESPACE ?= fedora-oci
-BASE_IMAGE ?= quay.io/fedora-ostree-desktops/silverblue
+BASE_IMAGE ?= quay.io/fedora-ostree-desktops/kinoite
 BASE_VERSION ?= 44
 
 .PHONY: all nvidia amd clean
