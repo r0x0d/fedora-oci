@@ -15,3 +15,4 @@ configurations:
         - io.podman_desktop.PodmanDesktop
         - org.libreoffice.LibreOffice
         - im.riot.Riot
+        - org.mozilla.firefox

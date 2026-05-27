@@ -5,6 +5,6 @@ modules:
   - type: dnf
     install:
       packages:
-        - kate
+        - alacritty
 
   - from-file: variants/default.yml

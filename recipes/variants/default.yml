@@ -9,4 +9,4 @@ modules:
   - from-file: shared/rpm-ostree.yml
 
   - type: chezmoi
-    repository: "https://github.com/r0x0d/dotfiles"
+    repository: "git@github.com:r0x0d/dotfiles"
