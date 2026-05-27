@@ -22,3 +22,4 @@ remove:
   - libswscale-free
   - ffmpeg-free
   - firefox
+  - firefox-langpacks

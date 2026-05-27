@@ -16,6 +16,5 @@ install:
     - gh
     - fish
     - fuse-sshfs
-    - firefox
     - clamav
     - sensors
