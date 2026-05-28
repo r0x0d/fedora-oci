@@ -6,4 +6,3 @@ system:
   enabled:
     - systemd-timedated.service
     - systemd-timesyncd
-    - clamd@scan
