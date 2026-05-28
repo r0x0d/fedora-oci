@@ -17,6 +17,4 @@ install:
     - fish
     - fuse-sshfs
     - clamav
-    - clamav-freshclam
-    - clamd
     - sensors
