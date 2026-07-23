@@ -11,7 +11,6 @@ configurations:
         - com.discordapp.Discord
         - org.chromium.Chromium
         - com.spotify.Client
-        - com.valvesoftware.Steam
         - io.podman_desktop.PodmanDesktop
         - org.libreoffice.LibreOffice
         - im.riot.Riot
