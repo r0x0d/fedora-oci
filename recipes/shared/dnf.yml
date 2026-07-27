@@ -18,5 +18,4 @@ install:
     - fuse-sshfs
     - clamav
     - sensors
-    - steam
     - firefox
